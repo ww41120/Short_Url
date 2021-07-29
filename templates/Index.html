@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>short_Url</title>
+    <script src="/static/public/js/jquery.min.js"></script>
+</head>
+<script>
+function short_url(){
+    var long_url = $('#long_url')[0].value;
+    $.ajax({
+      type: 'POST',
+      url: '/',
+      data: {'url': long_url},
+      success: function(data){
+        $('#short_url').html(data.short_url)
+      },
+      dataType: "json"
+    });
+}
+</script>
+
+<body>
+<form>
+      <p>long_url: <input id="long_url" type="text" name="name" /></p>
+      <input type="button" value="handin" onclick="short_url()" />
+</form>
+<p id="short_url"></p>
+</body>
+</html>
