@@ -8,6 +8,9 @@ This is the coding challange for my interview
 	
 ## Technologies
 Python flask structure
+
+## Note
+The secretery inside are all fake
 	
 
 
